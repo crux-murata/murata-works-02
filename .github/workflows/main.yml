@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Upload via SFTP
-        uses: appleboy/sftp-action@v0.1.7
+        uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
@@ -31,5 +31,5 @@ jobs:
           port: 22
           debug: true
           source: "trunk/**"
-          target: "/html/murata-works-02/htdocs/"
+          target: "/srv/www/vhosts/murata-works-02/htdocs/"
           strip_components: 1
