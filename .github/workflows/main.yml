@@ -23,13 +23,12 @@ jobs:
           fetch-depth: 0
 
       - name: Upload via SFTP
-        uses: appleboy/scp-action@v0.1.7
+        uses: Creepios/scp-action@1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           debug: true
-          source: "trunk/**"
-          target: "/srv/www/vhosts/murata-works-02/htdocs/"
-          strip_components: 1
+          localPath: "trunk/**"
+          remotePath: "/srv/www/vhosts/murata-works-02/htdocs/"
