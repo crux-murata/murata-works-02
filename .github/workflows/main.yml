@@ -30,5 +30,6 @@ jobs:
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           debug: true
-          localDir: "trunk/**"
+          forceUpload: true
+          localDir: "trunk/"
           remoteDir: "/srv/www/vhosts/murata-works-02/htdocs/"
