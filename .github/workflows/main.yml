@@ -32,4 +32,4 @@ jobs:
           debug: true
           forceUpload: true
           localDir: "trunk/"
-          remoteDir: "/srv/www/vhosts/murata-works-02/htdocs/"
+          remoteDir: "/html/murata-works-02/htdocs/"
