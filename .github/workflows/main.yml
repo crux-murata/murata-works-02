@@ -23,12 +23,12 @@ jobs:
           fetch-depth: 0
 
       - name: Upload via SFTP
-        uses: Creepios/sftp-action@v1.0.3
+        uses: wangyucode/sftp-upload-action@v2.0.4
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           debug: true
-          localPath: "trunk/**"
-          remotePath: "/srv/www/vhosts/murata-works-02/htdocs/"
+          localDir: "trunk/**"
+          remoteDir: "/srv/www/vhosts/murata-works-02/htdocs/"
