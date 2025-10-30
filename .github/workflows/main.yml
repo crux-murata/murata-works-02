@@ -22,8 +22,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Upload via SCP
-        uses: appleboy/scp-action@v0.1.7
+      - name: Upload via SFTP
+        uses: appleboy/sftp-action@v0.1.7
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
