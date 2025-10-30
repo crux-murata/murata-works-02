@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
 
       - name: Upload via SFTP
-        uses: Creepios/scp-action@1.0.3
+        uses: Creepios/sftp-action@1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
