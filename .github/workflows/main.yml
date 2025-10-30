@@ -30,6 +30,6 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           debug: true
-          source: "trunk/"
+          source: "trunk/**"
           target: "/html/murata-works-02/htdocs/"
           strip_components: 1
